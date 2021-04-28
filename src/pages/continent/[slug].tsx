@@ -9,6 +9,7 @@ import {
   Image,
   useBreakpointValue,
   Grid,
+  Tooltip,
 } from "@chakra-ui/react";
 import { Banner } from "../../components/Banner";
 import { Header } from "../../components/Header";
@@ -75,7 +76,13 @@ const Continent: React.FC = () => {
                 24
               </Text>
               <Text fontWeight={[null, null, "bold"]}>
-                cidades +100 <Icon as={FiAlertCircle} color="gray.400" ml="1" />
+                cidades +100
+                <Tooltip
+                  label="São mais de 100 cidades para visitar..."
+                  fontSize="md"
+                >
+                  <Icon as={FiAlertCircle} color="gray.400" ml="1" />
+                </Tooltip>
               </Text>
             </Stack>
           </Flex>
@@ -102,12 +109,7 @@ const Continent: React.FC = () => {
                   alignItems="center"
                   justifyContent="center"
                 >
-                  <Box
-                    maxW="sm"
-                    bg="white"
-                    rounded="lg"
-                    shadow="sm"
-                  >
+                  <Box maxW="sm" bg="white" rounded="lg" shadow="sm">
                     <Image src="/images/london.jpg" roundedTop="lg" />
 
                     <Flex p="6" justify="space-between">
@@ -148,12 +150,7 @@ const Continent: React.FC = () => {
                   alignItems="center"
                   justifyContent="center"
                 >
-                  <Box
-                    maxW="sm"
-                    bg="white"
-                    rounded="lg"
-                    shadow="sm"
-                  >
+                  <Box maxW="sm" bg="white" rounded="lg" shadow="sm">
                     <Image src="/images/london.jpg" roundedTop="lg" />
 
                     <Flex p="6" justify="space-between">

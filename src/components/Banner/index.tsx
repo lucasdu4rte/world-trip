@@ -10,9 +10,9 @@ export const Banner = ({ imgSrc, title }: BannerProps) => {
   return (
     <Flex
       flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-      height="8rem"
+      justifyContent={["center", null, "flex-end"]}
+      alignItems={["center", null, "flex-start"]}
+      height={["8rem", null, "35vh"]}
       position="relative"
     >
       <Image
@@ -23,9 +23,15 @@ export const Banner = ({ imgSrc, title }: BannerProps) => {
         height="100%"
         objectFit="cover"
         src={imgSrc}
-        filter="brightness(50%)"
+        filter="brightness(55%)"
       />
-      <Text fontSize="2xl" fontWeight="700" color="gray.50" mb="2">
+      <Text
+        fontSize={["2xl", null, "3xl"]}
+        fontWeight={["700", null, "600"]}
+        color="gray.50"
+        mb={["2", null, "14"]}
+        ml={[null, null, "16"]}
+      >
         {title}
       </Text>
     </Flex>
